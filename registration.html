@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background: url('your-image-url.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 85%;
+        }
+
+        .form-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-weight: 600;
+        }
+
+        .required {
+            color: red;
+        }
+
+        .note {
+            font-size: 0.875rem;
+            margin-bottom: 20px;
+        }
+
+        .custom-file-label::after {
+            content: "Browse";
+        }
+
+        .btn-custom {
+            background-color: #343a40;
+            color: white;
+        }
+
+        .btn-custom:hover {
+            background-color: #23272b;
+        }
+
+        .preview {
+            margin-top: 20px;
+        }
+
+        .preview img,
+        .preview iframe {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container min-vh-100 d-flex align-items-center justify-content-center">
+        <div class="form-container col-md-8">
+            <h1 class="form-title text-center">REGISTRATION</h1>
+            <div class="bg-white dark:bg-zinc-800 p-6">
+                <p class="text-red-600 dark:text-red-400">* are required fields</p>
+                <p class="text-sm text-zinc-700 dark:text-zinc-300">
+                    For Photo, only .jpg and .png files are accepted. Image resolution must not greater than 2048px
+                    X 1024px. File size must not greater than 1MB. The photo may not be previewed, but it will be
+                    uploaded if the criteria are fulfilled.
+                </p>
+                <p class="text-sm text-zinc-700 dark:text-zinc-300">
+                    For documents, only pdf files are accepted & file size must not greater than 1MB.
+                </p>
+                <div class="mt-4 text-center">
+                    <h2 class="text-lg font-bold text-zinc-900 dark:text-white">राष्ट्रीय पुस्तकालय, कलकत्ता</h2>
+                    <h3 class="text-lg font-bold text-zinc-900 dark:text-white">NATIONAL LIBRARY, CALCUTTA</h3>
+                    <p class="text-sm text-zinc-700 dark:text-zinc-300">प्रवेश टिकट के लिए आवेदन पत्र</p>
+                    <p class="text-sm text-zinc-700 dark:text-zinc-300">APPLICATION FORM FOR ADMISSION TICKET</p>
+                </div>
+                <div class="mt-2 text-right">
+                    <p class="text-sm text-zinc-700 dark:text-zinc-300">रा. पु. - 19 / N. L. - 19</p>
+                </div>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="fullName">1. नाम / Name in full <span class="required">*</span></label>
+                    <input type="text" id="surname" class="form-control" placeholder="Enter Your Surname" required>
+                    <input type="text" id="firstName" class="form-control mt-2" placeholder="Enter Your First Name" required>
+                    <input type="text" id="middleName" class="form-control mt-2" placeholder="Enter Your Middle Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="nationality">2. राष्ट्रीयता / Nationality <span class="required">*</span></label>
+                    <input type="text" id="nationality" class="form-control" placeholder="Enter Your Nationality" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">3. जन्म तिथि / Date of Birth <span class="required">*</span></label>
+                    <input type="date" id="dob" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fatherName">4. पिता का नाम / Father's Name <span class="required">*</span></label>
+                    <input type="text" id="fatherName" class="form-control" placeholder="Enter Your Father's Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">5. पता / Address <span class="required">*</span></label>
+                    <input type="text" id="localAddress" class="form-control" placeholder="Enter Your Local Address" required>
+                    <input type="text" id="permanentAddress" class="form-control mt-2" placeholder="Enter Your Permanent Address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="education">6. शिक्षा / Education <span class="required">*</span></label>
+                    <input type="text" id="degree" class="form-control" placeholder="Enter Degree" required>
+                    <input type="text" id="university" class="form-control mt-2" placeholder="Enter Name of University" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="occupation">7. व्यवसाय / Occupation <span class="required">*</span></label>
+                    <input type="text" id="occupation" class="form-control" placeholder="Enter Your Occupation" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="designation">8. पद / Designation <span class="required">*</span></label>
+                    <input type="text" id="designation" class="form-control" placeholder="Enter Your Designation" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="projectName">9. कार्य का नाम, यदि कोई हो / Name of Project, if any</label>
+                    <input type="text" id="projectName" class="form-control" placeholder="Enter Your Project Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" class="form-control" placeholder="yourname@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile <span class="required">*</span></label>
+                    <input type="text" id="mobile" class="form-control" placeholder="+91 9876543210" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="identityProof">Identity Proof <span class="required">*</span></label>
+                    <select id="identityProof" class="form-control" required>
+                        <option value="">Select Identity Proof</option>
+                        <option value="Aadhar Card">Aadhar Card</option>
+                        <option value="Passport">Passport</option>
+                        <option value="Voter ID">Voter ID</option>
+                    </select>
+                    <input type="text" id="identityProofNo" class="form-control mt-2" placeholder="Enter Identity Proof No." required>
+                    <div class="custom-file mt-2">
+                        <input type="file" id="identityProofFile" class="custom-file-input" accept=".jpg,.png" required>
+                        <label class="custom-file-label" for="identityProofFile">Choose file</label>
+                    </div>
+                    <div class="preview mt-2" id="identityProofPreview"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="photo">Photo <span class="required">*</span></label>
+                    <div class="custom-file">
+                        <input type="file" id="photoFile" class="custom-file-input" accept=".jpg,.png" required>
+                        <label class="custom-file-label" for="photoFile">Choose file</label>
+                    </div>
+                    <div class="preview mt-2" id="photoPreview"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date <span class="required">*</span></label>
+                    <input type="date" id="date" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="recommendedBy">10. अनुशंसित / Recommended by:</label>
+                    <input type="text" id="recommendedByName" class="form-control" placeholder="Enter Name">
+                    <input type="text" id="recommendedByDesignation" class="form-control mt-2" placeholder="Enter Designation and Address">
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-custom">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Custom file input label update
+        $(".custom-file-input").on("change", function () {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+            previewFile(this);
+        });
+
+        // Preview uploaded files
+        function previewFile(input) {
+            var file = input.files[0];
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                var previewContainer = input.id === "photoFile" ? "#photoPreview" : "#identityProofPreview";
+                var fileType = file.type;
+
+                if (fileType.startsWith("image/")) {
+                    $(previewContainer).html('<img src="' + e.target.result + '" class="img-fluid"/>');
+                } else if (fileType === "application/pdf") {
+                    $(previewContainer).html('<iframe src="' + e.target.result + '" class="embed-responsive-item"></iframe>');
+                } else {
+                    $(previewContainer).html("File type not supported for preview");
+                }
+            };
+
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+</body>
+
+</html>
